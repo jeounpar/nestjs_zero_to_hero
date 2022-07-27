@@ -34,4 +34,10 @@ export class TasksService {
     if (index < 0) return;
     this.tasks.splice(index, 1);
   }
+
+  patchTaskStatus(id: string, status: TaskStatus): Task {
+    const task = this.tasks.find((task) => task.id === id);
+    task.status = status;
+    return task;
+  }
 }
