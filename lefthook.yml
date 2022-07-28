@@ -1,7 +1,13 @@
 pre-commit:
   commands:
-    linter:
+    es-linter:
       run: npm run lint
+    prettier:
+      run: npm run format
+
+pre-push:
   commands:
-    pretty:
+    es-linter:
+      run: npm run lint
+    prettier:
       run: npm run format
