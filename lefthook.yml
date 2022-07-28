@@ -1,6 +1,6 @@
 pre-add:
   commands:
-    pretty:
-      run: npm run format
+    # pretty:
+    #   run: npm run format
     linter:
       run: npm run lint
