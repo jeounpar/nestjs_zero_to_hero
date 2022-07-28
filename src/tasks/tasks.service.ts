@@ -19,7 +19,7 @@ export class TasksService {
     }
     return found;
   }
-	
+
   getTasksWithFilters(filterDto: GetTaskFilterDto): Task[] {
     const { status, search } = filterDto;
     let tasks = this.getAllTasks();
