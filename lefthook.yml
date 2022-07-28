@@ -1,8 +1,6 @@
-pre-commit:
+pre-add:
   commands:
     pretty:
-      run: npm run format && git add {staged_files}
+      run: npm run format
     linter:
       run: npm run lint
-    #tests:
-    #  run: npm run test
