@@ -1,4 +1,4 @@
-pre-add:
+pre-commit:
   commands:
     # pretty:
     #   run: npm run format
