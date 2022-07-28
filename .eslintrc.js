@@ -1,7 +1,10 @@
 module.exports = {
-  plugins: ['@typescript-eslint/eslint-plugin'],
+  root: true,
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
+  rules: {
+    indent: 'off',
+  },
 };
