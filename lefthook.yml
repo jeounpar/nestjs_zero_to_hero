@@ -1,6 +1,7 @@
 pre-commit:
   commands:
-    # pretty:
-    #   run: npm run format
     linter:
       run: npm run lint
+  commands:
+    pretty:
+      run: npm run format
