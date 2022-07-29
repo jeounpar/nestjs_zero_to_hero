@@ -1,4 +1,5 @@
-import { EntityRepository, Repository } from 'typeorm';
+import { NotFoundException } from '@nestjs/common';
+import { DeleteResult, EntityRepository, Repository } from 'typeorm';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { Task } from './task.entitiy';
 import { TaskStatus } from './tasks-status.enum';
@@ -15,5 +16,12 @@ export class TasksReposiroty extends Repository<Task> {
 
     await this.save(task);
     return task;
+  }
+
+  async deleteTask(id: string): Promise<void> {
+    const result = await this.delete({ id: id });
+    if (result.affected === 0) {
+      throw new NotFoundException(`Task with ID "${id}" not found`);
+    }
   }
 }
