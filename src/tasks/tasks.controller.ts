@@ -7,7 +7,6 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
-import { DeleteResult } from 'typeorm';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { UpdateTaskStatusDto } from './dto/update-task-status.dto';
 import { Task } from './task.entitiy';
